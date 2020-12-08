@@ -198,7 +198,7 @@ const showSteps = () => {
     size: { width, height },
   })
   i++
-  if (i < 100) {
+  if (i < 15000) {
     requestAnimationFrame(showSteps)
   }
 }
