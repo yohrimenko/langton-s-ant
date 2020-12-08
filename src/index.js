@@ -132,7 +132,12 @@ function canvasRender({ grid, rootElement, currentPosition, size }) {
   }
 
   cx.fillStyle = 'red'
-  cx.fillRect(currentPosition.x * boxSize, currentPosition.y * boxSize, boxSize, boxSize)
+  cx.fillRect(
+    currentPosition.x * boxSize,
+    currentPosition.y * boxSize,
+    boxSize,
+    boxSize
+  )
 
   cx.moveTo(0, 0)
 
@@ -188,7 +193,7 @@ window.start = () => {
     size: { width, height },
   })
   i++
-  if(i < 15000){
+  if (i < 15000) {
     requestAnimationFrame(window.start)
   }
 }
