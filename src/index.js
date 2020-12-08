@@ -181,8 +181,13 @@ document.addEventListener('DOMContentLoaded', function (event) {
   })
 })
 
+let i = 0
 window.start = () => {
-  let i = 0
+  i = 0
+  showSteps()
+}
+
+const showSteps = () => {
   let result = step(grid, currentPosition)
   grid = result.grid
   currentPosition = result.currentPosition
@@ -193,7 +198,7 @@ window.start = () => {
     size: { width, height },
   })
   i++
-  if (i < 15000) {
-    requestAnimationFrame(window.start)
+  if (i < 100) {
+    requestAnimationFrame(showSteps)
   }
 }
